@@ -34,10 +34,10 @@ const Note = ({ data, actions }) => {
           <>
             <IconButton
               edge="end"
+              id="edit"
               aria-label="delete"
               style={{ color: "magenta" }}
               onClick={() => {
-                console.log(inputFocus);
                 setInputFocus();
                 setMode(Mode.EDIT);
               }}
@@ -47,6 +47,7 @@ const Note = ({ data, actions }) => {
 
             <IconButton
               edge="end"
+              id="delete"
               aria-label="delete"
               onClick={() => setMode(Mode.DELETE)}
             >
@@ -61,6 +62,7 @@ const Note = ({ data, actions }) => {
             <Button
               size="small"
               color="primary"
+              id="edit-confirm"
               onClick={() => {
                 actions.updateNote(data.id, content);
                 setMode(Mode.SHOW);
@@ -71,6 +73,7 @@ const Note = ({ data, actions }) => {
 
             <Button
               size="small"
+              id="cancel"
               onClick={() => {
                 setContent(data.content); // reset to the original value
                 setMode(Mode.SHOW);
@@ -86,6 +89,7 @@ const Note = ({ data, actions }) => {
             <Button
               size="small"
               color="secondary"
+              id="delete-confirm"
               onClick={() => {
                 actions.deleteNote(data.id);
                 setMode(Mode.SHOW);
@@ -96,6 +100,7 @@ const Note = ({ data, actions }) => {
 
             <Button
               size="small"
+              id="cancel"
               onClick={() => {
                 setMode(Mode.SHOW);
               }}
@@ -112,6 +117,7 @@ const Note = ({ data, actions }) => {
   return (
     <ListItem divider>
       <Checkbox
+        id="complet"
         checked={data.isCompleted}
         onChange={(event) => actions.setComplete(data.id, event.target.checked)}
       />

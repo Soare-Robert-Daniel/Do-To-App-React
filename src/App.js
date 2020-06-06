@@ -17,7 +17,7 @@ const FilterOption = {
   COMPLETED: 1,
   IN_PROGRESS: 2,
   RECENT: 3,
-  OLD: 4
+  OLD: 4,
 };
 
 const App = () => {
@@ -25,7 +25,7 @@ const App = () => {
   const [notes, setNotes] = useState([]);
   const [filter, setFilter] = useState({
     type: FilterOption.ALL,
-    date: FilterOption.RECENT
+    date: FilterOption.RECENT,
   });
 
   const getId = () => {
@@ -33,12 +33,12 @@ const App = () => {
     return id;
   };
 
-  const createNote = content => {
+  const createNote = (content) => {
     const note = {
       id: getId(),
       content: content,
       date_created: new Date(),
-      isCompleted: false
+      isCompleted: false,
     };
     notes.unshift(note);
     setNotes([...notes]);
@@ -50,7 +50,7 @@ const App = () => {
     setNotes([...notes]);
   };
 
-  const deleteNote = idNote => {
+  const deleteNote = (idNote) => {
     setNotes(notes.filter(({ id }) => id !== idNote));
   };
 
@@ -83,7 +83,12 @@ const App = () => {
         break;
     }
 
-    return notesToRender;
+    return notesToRender.map((note) => (
+              <Note
+                key={note.id}
+                data={note}
+                actions={{updateNote, deleteNote, setComplete }}
+              />));
   };
 
   return (
@@ -102,7 +107,7 @@ const App = () => {
           <Toolbar
             style={{
               background:
-                "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)"
+                "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)",
             }}
           >
             <Button
@@ -120,7 +125,7 @@ const App = () => {
                 id="select-date"
                 style={{ color: "black" }}
                 value={filter.date}
-                onChange={event =>
+                onChange={(event) =>
                   setFilter({ ...filter, date: event.target.value })
                 }
               >
@@ -139,7 +144,7 @@ const App = () => {
                 id="select-type"
                 style={{ color: "black" }}
                 value={filter.type}
-                onChange={event =>
+                onChange={(event) =>
                   setFilter({ ...filter, type: event.target.value })
                 }
               >
@@ -156,13 +161,9 @@ const App = () => {
       <Container id="list" maxWidth={"md"}>
         <Paper>
           <List>
-            {renderNotes().map(note => (
-              <Note
-                key={note.id}
-                data={note}
-                actions={{ createNote, updateNote, deleteNote, setComplete }}
-              />
-            ))}
+            {
+                renderNotes()
+            }
           </List>
         </Paper>
       </Container>
