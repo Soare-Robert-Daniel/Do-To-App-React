@@ -123,7 +123,7 @@ const App = () => {
               onClick={() =>
                 dispatchNote({
                   type: ActionType.ADD,
-                  payload: { content: "Replace this text!" },
+                  payload: { content: "Edit this text!" },
                 })
               }
             >

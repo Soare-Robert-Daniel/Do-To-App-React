@@ -29,10 +29,10 @@ const Note = ({ data, dispatch }) => {
   const [content, setContent] = useState(data.content);
   const [inputFocus, setInputFocus] = useFocus();
 
-  const getTextColor = (modeType) => {
-    switch (modeType) {
+  const getTextColor = (m) => {
+    switch (mode) {
       case Mode.SHOW:
-        return "black";
+        return (data.isCompleted) ? "green" : "black";
       case Mode.EDIT:
         return "magenta";
       case Mode.DELETE:
@@ -155,7 +155,7 @@ const Note = ({ data, dispatch }) => {
         fullWidth
         readOnly={mode !== Mode.EDIT}
         style={{
-          color: getTextColor(mode),
+          color: getTextColor(),
         }}
         onChange={(event) => setContent(event.target.value)}
         //onDoubleClick={() => setMode(Mode.EDIT)}
