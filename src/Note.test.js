@@ -1,7 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
 import Note from "./Note";
-
 import Enzyme, { mount } from "enzyme";
 
 describe("Note Component", () => {
@@ -12,16 +10,12 @@ describe("Note Component", () => {
     isCompleted: false,
   };
 
-  const actionsMock = {
-    updateNote: jest.fn((x) => x),
-    deleteNote: jest.fn((x) => x),
-    setComplete: jest.fn((x) => x),
-  };
+  const dispatch = jest.fn((x) => x);
 
   let note;
 
   beforeEach(() => {
-    note = mount(<Note data={dataMock} actions={actionsMock} />);
+    note = mount(<Note data={dataMock} dispatch={dispatch} />);
   });
 
   test("render note", () => {

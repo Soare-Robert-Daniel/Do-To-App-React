@@ -2,19 +2,56 @@
 
 exports[`Note Component cancel delete button 1`] = `
 <Note
-  actions={
-    Object {
-      "deleteNote": [MockFunction],
-      "setComplete": [MockFunction],
-      "updateNote": [MockFunction],
-    }
-  }
   data={
     Object {
       "content": "hey",
       "data_created": "",
       "id": 0,
       "isCompleted": false,
+    }
+  }
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "payload": Object {
+              "content": "hey",
+              "id": 0,
+            },
+            "type": "UPDATE",
+          },
+        ],
+        Array [
+          Object {
+            "payload": Object {
+              "id": 0,
+            },
+            "type": "DELETE",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": Object {
+            "payload": Object {
+              "content": "hey",
+              "id": 0,
+            },
+            "type": "UPDATE",
+          },
+        },
+        Object {
+          "type": "return",
+          "value": Object {
+            "payload": Object {
+              "id": 0,
+            },
+            "type": "DELETE",
+          },
+        },
+      ],
     }
   }
 >
@@ -281,12 +318,12 @@ exports[`Note Component cancel delete button 1`] = `
         </WithStyles(ForwardRef(Checkbox))>
         <WithStyles(ForwardRef(InputBase))
           fullWidth={true}
-          id="content0"
+          id="content-0"
           inputRef={
             Object {
               "current": <textarea
                 class="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 readonly=""
                 rows="1"
                 style="height: 0px; overflow: hidden;"
@@ -298,7 +335,6 @@ exports[`Note Component cancel delete button 1`] = `
           key=".1"
           multiline={true}
           onChange={[Function]}
-          onDoubleClick={[Function]}
           onFocus={[Function]}
           readOnly={true}
           style={
@@ -332,12 +368,12 @@ exports[`Note Component cancel delete button 1`] = `
               }
             }
             fullWidth={true}
-            id="content0"
+            id="content-0"
             inputRef={
               Object {
                 "current": <textarea
                   class="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   readonly=""
                   rows="1"
                   style="height: 0px; overflow: hidden;"
@@ -348,7 +384,6 @@ exports[`Note Component cancel delete button 1`] = `
             }
             multiline={true}
             onChange={[Function]}
-            onDoubleClick={[Function]}
             onFocus={[Function]}
             readOnly={true}
             style={
@@ -361,7 +396,6 @@ exports[`Note Component cancel delete button 1`] = `
             <div
               className="MuiInputBase-root MuiInputBase-fullWidth MuiInputBase-multiline"
               onClick={[Function]}
-              onDoubleClick={[Function]}
               style={
                 Object {
                   "color": "black",
@@ -370,7 +404,7 @@ exports[`Note Component cancel delete button 1`] = `
             >
               <ForwardRef(TextareaAutosize)
                 className="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 onAnimationStart={[Function]}
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -380,7 +414,7 @@ exports[`Note Component cancel delete button 1`] = `
               >
                 <textarea
                   className="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
@@ -723,19 +757,39 @@ exports[`Note Component cancel delete button 1`] = `
 
 exports[`Note Component cancel edit button 1`] = `
 <Note
-  actions={
-    Object {
-      "deleteNote": [MockFunction],
-      "setComplete": [MockFunction],
-      "updateNote": [MockFunction],
-    }
-  }
   data={
     Object {
       "content": "hey",
       "data_created": "",
       "id": 0,
       "isCompleted": false,
+    }
+  }
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "payload": Object {
+              "content": "hey",
+              "id": 0,
+            },
+            "type": "UPDATE",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": Object {
+            "payload": Object {
+              "content": "hey",
+              "id": 0,
+            },
+            "type": "UPDATE",
+          },
+        },
+      ],
     }
   }
 >
@@ -1002,12 +1056,12 @@ exports[`Note Component cancel edit button 1`] = `
         </WithStyles(ForwardRef(Checkbox))>
         <WithStyles(ForwardRef(InputBase))
           fullWidth={true}
-          id="content0"
+          id="content-0"
           inputRef={
             Object {
               "current": <textarea
                 class="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 readonly=""
                 rows="1"
                 style="height: 0px; overflow: hidden;"
@@ -1019,7 +1073,6 @@ exports[`Note Component cancel edit button 1`] = `
           key=".1"
           multiline={true}
           onChange={[Function]}
-          onDoubleClick={[Function]}
           onFocus={[Function]}
           readOnly={true}
           style={
@@ -1053,12 +1106,12 @@ exports[`Note Component cancel edit button 1`] = `
               }
             }
             fullWidth={true}
-            id="content0"
+            id="content-0"
             inputRef={
               Object {
                 "current": <textarea
                   class="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   readonly=""
                   rows="1"
                   style="height: 0px; overflow: hidden;"
@@ -1069,7 +1122,6 @@ exports[`Note Component cancel edit button 1`] = `
             }
             multiline={true}
             onChange={[Function]}
-            onDoubleClick={[Function]}
             onFocus={[Function]}
             readOnly={true}
             style={
@@ -1082,7 +1134,6 @@ exports[`Note Component cancel edit button 1`] = `
             <div
               className="MuiInputBase-root MuiInputBase-fullWidth MuiInputBase-multiline"
               onClick={[Function]}
-              onDoubleClick={[Function]}
               style={
                 Object {
                   "color": "black",
@@ -1091,7 +1142,7 @@ exports[`Note Component cancel edit button 1`] = `
             >
               <ForwardRef(TextareaAutosize)
                 className="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 onAnimationStart={[Function]}
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -1101,7 +1152,7 @@ exports[`Note Component cancel edit button 1`] = `
               >
                 <textarea
                   className="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
@@ -1444,19 +1495,56 @@ exports[`Note Component cancel edit button 1`] = `
 
 exports[`Note Component checkbox 1`] = `
 <Note
-  actions={
-    Object {
-      "deleteNote": [MockFunction],
-      "setComplete": [MockFunction],
-      "updateNote": [MockFunction],
-    }
-  }
   data={
     Object {
       "content": "hey",
       "data_created": "",
       "id": 0,
       "isCompleted": false,
+    }
+  }
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "payload": Object {
+              "content": "hey",
+              "id": 0,
+            },
+            "type": "UPDATE",
+          },
+        ],
+        Array [
+          Object {
+            "payload": Object {
+              "id": 0,
+            },
+            "type": "DELETE",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": Object {
+            "payload": Object {
+              "content": "hey",
+              "id": 0,
+            },
+            "type": "UPDATE",
+          },
+        },
+        Object {
+          "type": "return",
+          "value": Object {
+            "payload": Object {
+              "id": 0,
+            },
+            "type": "DELETE",
+          },
+        },
+      ],
     }
   }
 >
@@ -1723,12 +1811,12 @@ exports[`Note Component checkbox 1`] = `
         </WithStyles(ForwardRef(Checkbox))>
         <WithStyles(ForwardRef(InputBase))
           fullWidth={true}
-          id="content0"
+          id="content-0"
           inputRef={
             Object {
               "current": <textarea
                 class="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 readonly=""
                 rows="1"
                 style="height: 0px; overflow: hidden;"
@@ -1740,7 +1828,6 @@ exports[`Note Component checkbox 1`] = `
           key=".1"
           multiline={true}
           onChange={[Function]}
-          onDoubleClick={[Function]}
           onFocus={[Function]}
           readOnly={true}
           style={
@@ -1774,12 +1861,12 @@ exports[`Note Component checkbox 1`] = `
               }
             }
             fullWidth={true}
-            id="content0"
+            id="content-0"
             inputRef={
               Object {
                 "current": <textarea
                   class="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   readonly=""
                   rows="1"
                   style="height: 0px; overflow: hidden;"
@@ -1790,7 +1877,6 @@ exports[`Note Component checkbox 1`] = `
             }
             multiline={true}
             onChange={[Function]}
-            onDoubleClick={[Function]}
             onFocus={[Function]}
             readOnly={true}
             style={
@@ -1803,7 +1889,6 @@ exports[`Note Component checkbox 1`] = `
             <div
               className="MuiInputBase-root MuiInputBase-fullWidth MuiInputBase-multiline"
               onClick={[Function]}
-              onDoubleClick={[Function]}
               style={
                 Object {
                   "color": "black",
@@ -1812,7 +1897,7 @@ exports[`Note Component checkbox 1`] = `
             >
               <ForwardRef(TextareaAutosize)
                 className="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 onAnimationStart={[Function]}
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -1822,7 +1907,7 @@ exports[`Note Component checkbox 1`] = `
               >
                 <textarea
                   className="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
@@ -2165,44 +2250,56 @@ exports[`Note Component checkbox 1`] = `
 
 exports[`Note Component confirm delete button 1`] = `
 <Note
-  actions={
-    Object {
-      "deleteNote": [MockFunction] {
-        "calls": Array [
-          Array [
-            0,
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": 0,
-          },
-        ],
-      },
-      "setComplete": [MockFunction],
-      "updateNote": [MockFunction] {
-        "calls": Array [
-          Array [
-            0,
-            "hey",
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": 0,
-          },
-        ],
-      },
-    }
-  }
   data={
     Object {
       "content": "hey",
       "data_created": "",
       "id": 0,
       "isCompleted": false,
+    }
+  }
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "payload": Object {
+              "content": "hey",
+              "id": 0,
+            },
+            "type": "UPDATE",
+          },
+        ],
+        Array [
+          Object {
+            "payload": Object {
+              "id": 0,
+            },
+            "type": "DELETE",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": Object {
+            "payload": Object {
+              "content": "hey",
+              "id": 0,
+            },
+            "type": "UPDATE",
+          },
+        },
+        Object {
+          "type": "return",
+          "value": Object {
+            "payload": Object {
+              "id": 0,
+            },
+            "type": "DELETE",
+          },
+        },
+      ],
     }
   }
 >
@@ -2469,12 +2566,12 @@ exports[`Note Component confirm delete button 1`] = `
         </WithStyles(ForwardRef(Checkbox))>
         <WithStyles(ForwardRef(InputBase))
           fullWidth={true}
-          id="content0"
+          id="content-0"
           inputRef={
             Object {
               "current": <textarea
                 class="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 readonly=""
                 rows="1"
                 style="height: 0px; overflow: hidden;"
@@ -2486,7 +2583,6 @@ exports[`Note Component confirm delete button 1`] = `
           key=".1"
           multiline={true}
           onChange={[Function]}
-          onDoubleClick={[Function]}
           onFocus={[Function]}
           readOnly={true}
           style={
@@ -2520,12 +2616,12 @@ exports[`Note Component confirm delete button 1`] = `
               }
             }
             fullWidth={true}
-            id="content0"
+            id="content-0"
             inputRef={
               Object {
                 "current": <textarea
                   class="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   readonly=""
                   rows="1"
                   style="height: 0px; overflow: hidden;"
@@ -2536,7 +2632,6 @@ exports[`Note Component confirm delete button 1`] = `
             }
             multiline={true}
             onChange={[Function]}
-            onDoubleClick={[Function]}
             onFocus={[Function]}
             readOnly={true}
             style={
@@ -2549,7 +2644,6 @@ exports[`Note Component confirm delete button 1`] = `
             <div
               className="MuiInputBase-root MuiInputBase-fullWidth MuiInputBase-multiline"
               onClick={[Function]}
-              onDoubleClick={[Function]}
               style={
                 Object {
                   "color": "black",
@@ -2558,7 +2652,7 @@ exports[`Note Component confirm delete button 1`] = `
             >
               <ForwardRef(TextareaAutosize)
                 className="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 onAnimationStart={[Function]}
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -2568,7 +2662,7 @@ exports[`Note Component confirm delete button 1`] = `
               >
                 <textarea
                   className="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
@@ -2911,32 +3005,39 @@ exports[`Note Component confirm delete button 1`] = `
 
 exports[`Note Component confirm edit button 1`] = `
 <Note
-  actions={
-    Object {
-      "deleteNote": [MockFunction],
-      "setComplete": [MockFunction],
-      "updateNote": [MockFunction] {
-        "calls": Array [
-          Array [
-            0,
-            "hey",
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": 0,
-          },
-        ],
-      },
-    }
-  }
   data={
     Object {
       "content": "hey",
       "data_created": "",
       "id": 0,
       "isCompleted": false,
+    }
+  }
+  dispatch={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "payload": Object {
+              "content": "hey",
+              "id": 0,
+            },
+            "type": "UPDATE",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": Object {
+            "payload": Object {
+              "content": "hey",
+              "id": 0,
+            },
+            "type": "UPDATE",
+          },
+        },
+      ],
     }
   }
 >
@@ -3203,12 +3304,12 @@ exports[`Note Component confirm edit button 1`] = `
         </WithStyles(ForwardRef(Checkbox))>
         <WithStyles(ForwardRef(InputBase))
           fullWidth={true}
-          id="content0"
+          id="content-0"
           inputRef={
             Object {
               "current": <textarea
                 class="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 readonly=""
                 rows="1"
                 style="height: 0px; overflow: hidden;"
@@ -3220,7 +3321,6 @@ exports[`Note Component confirm edit button 1`] = `
           key=".1"
           multiline={true}
           onChange={[Function]}
-          onDoubleClick={[Function]}
           onFocus={[Function]}
           readOnly={true}
           style={
@@ -3254,12 +3354,12 @@ exports[`Note Component confirm edit button 1`] = `
               }
             }
             fullWidth={true}
-            id="content0"
+            id="content-0"
             inputRef={
               Object {
                 "current": <textarea
                   class="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   readonly=""
                   rows="1"
                   style="height: 0px; overflow: hidden;"
@@ -3270,7 +3370,6 @@ exports[`Note Component confirm edit button 1`] = `
             }
             multiline={true}
             onChange={[Function]}
-            onDoubleClick={[Function]}
             onFocus={[Function]}
             readOnly={true}
             style={
@@ -3283,7 +3382,6 @@ exports[`Note Component confirm edit button 1`] = `
             <div
               className="MuiInputBase-root MuiInputBase-fullWidth MuiInputBase-multiline"
               onClick={[Function]}
-              onDoubleClick={[Function]}
               style={
                 Object {
                   "color": "black",
@@ -3292,7 +3390,7 @@ exports[`Note Component confirm edit button 1`] = `
             >
               <ForwardRef(TextareaAutosize)
                 className="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 onAnimationStart={[Function]}
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -3302,7 +3400,7 @@ exports[`Note Component confirm edit button 1`] = `
               >
                 <textarea
                   className="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
@@ -3645,13 +3743,6 @@ exports[`Note Component confirm edit button 1`] = `
 
 exports[`Note Component delete button 1`] = `
 <Note
-  actions={
-    Object {
-      "deleteNote": [MockFunction],
-      "setComplete": [MockFunction],
-      "updateNote": [MockFunction],
-    }
-  }
   data={
     Object {
       "content": "hey",
@@ -3660,6 +3751,7 @@ exports[`Note Component delete button 1`] = `
       "isCompleted": false,
     }
   }
+  dispatch={[MockFunction]}
 >
   <WithStyles(ForwardRef(ListItem))
     divider={true}
@@ -3924,12 +4016,12 @@ exports[`Note Component delete button 1`] = `
         </WithStyles(ForwardRef(Checkbox))>
         <WithStyles(ForwardRef(InputBase))
           fullWidth={true}
-          id="content0"
+          id="content-0"
           inputRef={
             Object {
               "current": <textarea
                 class="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 readonly=""
                 rows="1"
                 style="height: 0px; overflow: hidden;"
@@ -3941,12 +4033,11 @@ exports[`Note Component delete button 1`] = `
           key=".1"
           multiline={true}
           onChange={[Function]}
-          onDoubleClick={[Function]}
           onFocus={[Function]}
           readOnly={true}
           style={
             Object {
-              "color": "black",
+              "color": "darkgrey",
             }
           }
           value="hey"
@@ -3975,12 +4066,12 @@ exports[`Note Component delete button 1`] = `
               }
             }
             fullWidth={true}
-            id="content0"
+            id="content-0"
             inputRef={
               Object {
                 "current": <textarea
                   class="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   readonly=""
                   rows="1"
                   style="height: 0px; overflow: hidden;"
@@ -3991,12 +4082,11 @@ exports[`Note Component delete button 1`] = `
             }
             multiline={true}
             onChange={[Function]}
-            onDoubleClick={[Function]}
             onFocus={[Function]}
             readOnly={true}
             style={
               Object {
-                "color": "black",
+                "color": "darkgrey",
               }
             }
             value="hey"
@@ -4004,16 +4094,15 @@ exports[`Note Component delete button 1`] = `
             <div
               className="MuiInputBase-root MuiInputBase-fullWidth MuiInputBase-multiline"
               onClick={[Function]}
-              onDoubleClick={[Function]}
               style={
                 Object {
-                  "color": "black",
+                  "color": "darkgrey",
                 }
               }
             >
               <ForwardRef(TextareaAutosize)
                 className="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 onAnimationStart={[Function]}
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -4023,7 +4112,7 @@ exports[`Note Component delete button 1`] = `
               >
                 <textarea
                   className="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
@@ -4323,13 +4412,6 @@ exports[`Note Component delete button 1`] = `
 
 exports[`Note Component edit button 1`] = `
 <Note
-  actions={
-    Object {
-      "deleteNote": [MockFunction],
-      "setComplete": [MockFunction],
-      "updateNote": [MockFunction],
-    }
-  }
   data={
     Object {
       "content": "hey",
@@ -4338,6 +4420,7 @@ exports[`Note Component edit button 1`] = `
       "isCompleted": false,
     }
   }
+  dispatch={[MockFunction]}
 >
   <WithStyles(ForwardRef(ListItem))
     divider={true}
@@ -4602,12 +4685,12 @@ exports[`Note Component edit button 1`] = `
         </WithStyles(ForwardRef(Checkbox))>
         <WithStyles(ForwardRef(InputBase))
           fullWidth={true}
-          id="content0"
+          id="content-0"
           inputRef={
             Object {
               "current": <textarea
                 class="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 rows="1"
                 style="height: 0px; overflow: hidden;"
               >
@@ -4618,7 +4701,6 @@ exports[`Note Component edit button 1`] = `
           key=".1"
           multiline={true}
           onChange={[Function]}
-          onDoubleClick={[Function]}
           onFocus={[Function]}
           readOnly={false}
           style={
@@ -4652,12 +4734,12 @@ exports[`Note Component edit button 1`] = `
               }
             }
             fullWidth={true}
-            id="content0"
+            id="content-0"
             inputRef={
               Object {
                 "current": <textarea
                   class="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   rows="1"
                   style="height: 0px; overflow: hidden;"
                 >
@@ -4667,7 +4749,6 @@ exports[`Note Component edit button 1`] = `
             }
             multiline={true}
             onChange={[Function]}
-            onDoubleClick={[Function]}
             onFocus={[Function]}
             readOnly={false}
             style={
@@ -4680,7 +4761,6 @@ exports[`Note Component edit button 1`] = `
             <div
               className="MuiInputBase-root MuiInputBase-fullWidth MuiInputBase-multiline"
               onClick={[Function]}
-              onDoubleClick={[Function]}
               style={
                 Object {
                   "color": "magenta",
@@ -4689,7 +4769,7 @@ exports[`Note Component edit button 1`] = `
             >
               <ForwardRef(TextareaAutosize)
                 className="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 onAnimationStart={[Function]}
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -4699,7 +4779,7 @@ exports[`Note Component edit button 1`] = `
               >
                 <textarea
                   className="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}
@@ -4999,13 +5079,6 @@ exports[`Note Component edit button 1`] = `
 
 exports[`Note Component render note 1`] = `
 <Note
-  actions={
-    Object {
-      "deleteNote": [MockFunction],
-      "setComplete": [MockFunction],
-      "updateNote": [MockFunction],
-    }
-  }
   data={
     Object {
       "content": "hey",
@@ -5014,6 +5087,7 @@ exports[`Note Component render note 1`] = `
       "isCompleted": false,
     }
   }
+  dispatch={[MockFunction]}
 >
   <WithStyles(ForwardRef(ListItem))
     divider={true}
@@ -5278,12 +5352,12 @@ exports[`Note Component render note 1`] = `
         </WithStyles(ForwardRef(Checkbox))>
         <WithStyles(ForwardRef(InputBase))
           fullWidth={true}
-          id="content0"
+          id="content-0"
           inputRef={
             Object {
               "current": <textarea
                 class="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 readonly=""
                 rows="1"
                 style="height: 0px; overflow: hidden;"
@@ -5295,7 +5369,6 @@ exports[`Note Component render note 1`] = `
           key=".1"
           multiline={true}
           onChange={[Function]}
-          onDoubleClick={[Function]}
           onFocus={[Function]}
           readOnly={true}
           style={
@@ -5329,12 +5402,12 @@ exports[`Note Component render note 1`] = `
               }
             }
             fullWidth={true}
-            id="content0"
+            id="content-0"
             inputRef={
               Object {
                 "current": <textarea
                   class="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   readonly=""
                   rows="1"
                   style="height: 0px; overflow: hidden;"
@@ -5345,7 +5418,6 @@ exports[`Note Component render note 1`] = `
             }
             multiline={true}
             onChange={[Function]}
-            onDoubleClick={[Function]}
             onFocus={[Function]}
             readOnly={true}
             style={
@@ -5358,7 +5430,6 @@ exports[`Note Component render note 1`] = `
             <div
               className="MuiInputBase-root MuiInputBase-fullWidth MuiInputBase-multiline"
               onClick={[Function]}
-              onDoubleClick={[Function]}
               style={
                 Object {
                   "color": "black",
@@ -5367,7 +5438,7 @@ exports[`Note Component render note 1`] = `
             >
               <ForwardRef(TextareaAutosize)
                 className="MuiInputBase-input MuiInputBase-inputMultiline"
-                id="content0"
+                id="content-0"
                 onAnimationStart={[Function]}
                 onBlur={[Function]}
                 onChange={[Function]}
@@ -5377,7 +5448,7 @@ exports[`Note Component render note 1`] = `
               >
                 <textarea
                   className="MuiInputBase-input MuiInputBase-inputMultiline"
-                  id="content0"
+                  id="content-0"
                   onAnimationStart={[Function]}
                   onBlur={[Function]}
                   onChange={[Function]}

@@ -39,8 +39,6 @@ const reducer = (state, action) => {
           date_created: new Date(),
           isCompleted: false,
         };
-        //state.unshift(note);
-        
         return [...state, note];
 
       case ActionType.UPDATE:
@@ -96,7 +94,7 @@ const App = () => {
     }
 
     return notesToRender.map((note) => (
-      <Note key={note.id} data={note} dispatch={dispatchNote} />
+      <Note key={note.id} id={note.id} data={note} dispatch={dispatchNote} />
     ));
   };
 

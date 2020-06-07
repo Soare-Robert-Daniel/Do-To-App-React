@@ -149,7 +149,7 @@ const Note = ({ data, dispatch }) => {
       />
       <InputBase
         inputRef={inputFocus}
-        id={`content${data.id}`}
+        id={`content-${data.id}`}
         value={content}
         multiline
         fullWidth
