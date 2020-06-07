@@ -7,7 +7,7 @@ import IconButton from "@material-ui/core/IconButton";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 
-import {ActionType} from './App'
+import { ActionType } from "./App";
 
 const Mode = {
   SHOW: "SHOW",
@@ -28,6 +28,19 @@ const Note = ({ data, dispatch }) => {
   const [mode, setMode] = useState(Mode.SHOW);
   const [content, setContent] = useState(data.content);
   const [inputFocus, setInputFocus] = useFocus();
+
+  const getTextColor = (modeType) => {
+    switch (modeType) {
+      case Mode.SHOW:
+        return "black";
+      case Mode.EDIT:
+        return "magenta";
+      case Mode.DELETE:
+        return "darkgrey";
+      default:
+        return "black";
+    }
+  };
 
   const renderActions = () => {
     switch (mode) {
@@ -66,7 +79,10 @@ const Note = ({ data, dispatch }) => {
               color="primary"
               id="edit-confirm"
               onClick={() => {
-                dispatch({type: ActionType.UPDATE, payload: {id: data.id, content}});
+                dispatch({
+                  type: ActionType.UPDATE,
+                  payload: { id: data.id, content },
+                });
                 setMode(Mode.SHOW);
               }}
             >
@@ -95,7 +111,7 @@ const Note = ({ data, dispatch }) => {
               onClick={() => {
                 dispatch({
                   type: ActionType.DELETE,
-                  payload: { id: data.id},
+                  payload: { id: data.id },
                 });
                 setMode(Mode.SHOW);
               }}
@@ -138,9 +154,11 @@ const Note = ({ data, dispatch }) => {
         multiline
         fullWidth
         readOnly={mode !== Mode.EDIT}
-        style={{ color: mode === Mode.EDIT ? "magenta" : "black" }}
+        style={{
+          color: getTextColor(mode),
+        }}
         onChange={(event) => setContent(event.target.value)}
-        onDoubleClick={() => setMode(Mode.EDIT)}
+        //onDoubleClick={() => setMode(Mode.EDIT)}
         onFocus={(event) => event.target.select()}
       />
 
