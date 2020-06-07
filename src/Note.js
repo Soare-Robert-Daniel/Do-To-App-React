@@ -10,9 +10,9 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import {ActionType} from './App'
 
 const Mode = {
-  SHOW: 1,
-  EDIT: 2,
-  DELETE: 3,
+  SHOW: "SHOW",
+  EDIT: "EDIT",
+  DELETE: "DELETE",
 };
 
 const useFocus = () => {
