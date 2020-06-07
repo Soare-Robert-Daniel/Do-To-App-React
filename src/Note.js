@@ -7,6 +7,8 @@ import IconButton from "@material-ui/core/IconButton";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 
+import {ActionType} from './App'
+
 const Mode = {
   SHOW: 1,
   EDIT: 2,
@@ -22,7 +24,7 @@ const useFocus = () => {
   return [htmlElRef, setFocus];
 };
 
-const Note = ({ data, actions }) => {
+const Note = ({ data, dispatch }) => {
   const [mode, setMode] = useState(Mode.SHOW);
   const [content, setContent] = useState(data.content);
   const [inputFocus, setInputFocus] = useFocus();
@@ -64,7 +66,7 @@ const Note = ({ data, actions }) => {
               color="primary"
               id="edit-confirm"
               onClick={() => {
-                actions.updateNote(data.id, content);
+                dispatch({type: ActionType.UPDATE, payload: {id: data.id, content}});
                 setMode(Mode.SHOW);
               }}
             >
@@ -91,7 +93,10 @@ const Note = ({ data, actions }) => {
               color="secondary"
               id="delete-confirm"
               onClick={() => {
-                actions.deleteNote(data.id);
+                dispatch({
+                  type: ActionType.DELETE,
+                  payload: { id: data.id},
+                });
                 setMode(Mode.SHOW);
               }}
             >
@@ -119,7 +124,12 @@ const Note = ({ data, actions }) => {
       <Checkbox
         id="complet"
         checked={data.isCompleted}
-        onChange={(event) => actions.setComplete(data.id, event.target.checked)}
+        onChange={(event) =>
+          dispatch({
+            type: ActionType.SET,
+            payload: { id: data.id, value: event.target.checked },
+          })
+        }
       />
       <InputBase
         inputRef={inputFocus}

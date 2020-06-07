@@ -4,34 +4,9 @@ exports[`Note Component cancel delete button 1`] = `
 <Note
   actions={
     Object {
-      "deleteNote": [MockFunction] {
-        "calls": Array [
-          Array [
-            0,
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": 0,
-          },
-        ],
-      },
+      "deleteNote": [MockFunction],
       "setComplete": [MockFunction],
-      "updateNote": [MockFunction] {
-        "calls": Array [
-          Array [
-            0,
-            "hey",
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": 0,
-          },
-        ],
-      },
+      "updateNote": [MockFunction],
     }
   }
   data={
@@ -752,20 +727,7 @@ exports[`Note Component cancel edit button 1`] = `
     Object {
       "deleteNote": [MockFunction],
       "setComplete": [MockFunction],
-      "updateNote": [MockFunction] {
-        "calls": Array [
-          Array [
-            0,
-            "hey",
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": 0,
-          },
-        ],
-      },
+      "updateNote": [MockFunction],
     }
   }
   data={
@@ -1484,34 +1446,9 @@ exports[`Note Component checkbox 1`] = `
 <Note
   actions={
     Object {
-      "deleteNote": [MockFunction] {
-        "calls": Array [
-          Array [
-            0,
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": 0,
-          },
-        ],
-      },
+      "deleteNote": [MockFunction],
       "setComplete": [MockFunction],
-      "updateNote": [MockFunction] {
-        "calls": Array [
-          Array [
-            0,
-            "hey",
-          ],
-        ],
-        "results": Array [
-          Object {
-            "type": "return",
-            "value": 0,
-          },
-        ],
-      },
+      "updateNote": [MockFunction],
     }
   }
   data={
